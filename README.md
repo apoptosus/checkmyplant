@@ -32,4 +32,4 @@ Gehan, M. A., Fahlgren, N., Abbasi, A., Berry, J. C., Callen, S. T., Chavez, L.,
 
 #### Hat Tip:
 
-PixelWarStudio for the little tree designs (https://github.com/PixelwarStudio/PyTree)
+PixelWarStudio for the [little tree designs](https://github.com/PixelwarStudio/PyTree)

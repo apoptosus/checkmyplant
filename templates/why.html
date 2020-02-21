@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+{% extends "index.html" %}
+{% block body %}
+<head>
+  <style>
+    h2 {font-size: 40px;}
+    p {font-size: 18px;}
+    body {
+      background-color:white;
+      padding-top: 50px;
+
+    }
+    .top-container .row .column img {
+      width: 100%;
+      height: auto;
+    }
+
+    .mid-container .row .column img {
+      width: 100%;
+      height: auto;
+    }
+
+    .bg-img1 {
+      background: url('../static/img/Tennis.jpeg') no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../static/img/Tennis.jpeg', sizingMethod='scale')";
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../static/img/Tennis.jpeg', sizingMethod='scale');
+      text-align: center
+    }
+
+    .bg-img2 {
+      background: url('../static/img/greengurgle.jpg') no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../static/img/greengurgle.jpg', sizingMethod='scale')";
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../static/img/greengurgle.jpg', sizingMethod='scale');
+      text-align: center
+    }
+
+
+
+    .top-container img{
+      border:5px solid black;
+    }
+
+    .row {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+
+    .top-container .column {
+      float: left;
+      width: 33.3%;
+    }
+
+    .mid-container .column {
+      float: left;
+      width: 15%;
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+  </style>
+
+  <title> About the Project </title>
+</head>
+
+<body>
+  <div class="bg-img2" style="color:black">
+    <br>
+    <h1 style="text-align: center; color:#003300;"><b> About me: </b></h1>
+    <br>
+  </div>
+
+
+  <div class="top-container" style="background-color:black;">
+
+    <div class="row">
+       <div class="column">
+         <img src="../static/img/sadboi.jpg">
+         <img src="../static/img/dendrites3.jpg">
+         <img src="../static/img/pcvbranch.png">
+         <p style="color:gray; opacity:0.7; text-align:center; font-size:1.5vw;">Bradley Scherer <br> contact: bradleydscherer@gmail.com<br></p>
+
+       </div>
+       <div class="column">
+         <img src="../static/img/me2.jpeg">
+         <img src="../static/img/greenscope1.jpg">
+         <img src="../static/img/bigleaf.jpg">
+       </div>
+
+       <div class="column">
+
+         <img src="../static/img/neurons.jpeg">
+
+         <img src="../static/img/griver.jpg">
+         <img src="../static/img/mushies.jpeg">
+         <p style="color: gray; opacity: 0.7; text-align:center; font-size:1.5vw;">All photos taken by me unless otherwise specified</p>
+
+       </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="bg-img1" style="color:black">
+  <br>
+  <br>
+</div>
+
+  <div class="mid-container" style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+    <div class="row">
+       <div class="column">
+         <img style="float: right;" src="../static/img/treel.png" style="width:50%; padding:0px 0px;">
+       </div>
+
+       <div class="column" style="width:70%">
+         <h2 style="text-align:center;">So What Exactly is This Project?</h2>
+         <hr>
+         <p>Like many other amateur houseplant moms/dads, I find myself in a bit of a moral dilemma. The more love I give to growing houseplants, the more I buy and eventually overwater, or let sit while on vacation for a week, and eventually, inevitably, let die. I must face the consequence of killing these little lifeforms. While it would be practical to simply pay more attention to their care and develop a green thumb by feeling the soil and listening to the land, I've decided with the nuclear option: a full fledged digital monitoring system complete with computer visualization to track the plant's condition at every hour of the day.
+         <br>
+         <br>
+         <img align="left" style="border:3px solid black; width: 30%; margin: 0px 15px 0px 0px;" src="../static/img/cap2.jpg">
+
+         I now keep a running tally of the temperature and humidity (
+         <a href="https://www.adafruit.com/product/386">dht11 sensor</a>
+         ), light exposure (
+         <a href="https://www.adafruit.com/product/439">cds photocell</a>
+         ), weather conditions (
+         <a href="https://darksky.net/dev">darksky</a>
+          and
+         <a href="https://weather.com"> weather.com</a>
+         ), soil moisture (
+         <a href="https://www.amazon.com/Gikfun-Capacitive-Corrosion-Resistant-Detection/dp/B07H3P1NRM/ref=sr_1_5?keywords=capacitive+moisture+sensor&qid=1580962810&sr=8-5">capacative soil moisture sensor</a>
+         ),
+         and physical size and color (
+         <a href="https://plantcv.danforthcenter.org/">PlantCV</a>
+         ) of the plant.
+
+         <img  align="right" style="border:3px solid black; width: 40%; margin-left: 15px; margin-top:10px;" src="../static/img/cds2.jpg">
+
+         These readings serve to visualize how the harsh elements of my apartment are affecting my plant's life cycle. Using this web server I, and the general public, can view the different conditions my plant has been subject to as well as how it has fared despite them, immortalized in temporary-data-time. I am hoping this new plant studio will keep me accountable for my plant-tending mistakes (there are surely many to come).
+         </p>
+       </div>
+
+       <div class="column">
+         <img style="float: right;" src="../static/img/treer.png" style="width:50%; padding:0px 0px;">
+       </div>
+
+    </div>
+
+
+  </div>
+    <hr>
+    <div class="bg-img1" style="color:black">
+      <br>
+      <br>
+    </div>
+
+
+  <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+    <h2 style="text-align:center;">How does it work?</h2>
+    <hr>
+    <p>There is a plant. There is a raspberry pi that takes pictures of a plant. There is a script that runs on the pi that automates the picture taking and sends those pictures through an analysis pipeline,<a href="https://plantcv.danforthcenter.org/"> PlantCV</a>, directly in a virtual environment on the pi.
+      PlantCV is an opensource plant phenotyping project headed by the <a href="https://www.danforthcenter.org/"> Danforth Plant Science Center</a>, that uses OpenCV to digitally visualize plant images and report information on their dimensions and color (among other things).
+      <br>
+      <br>
+      To standardize lighting, an<a href="https://www.digital-loggers.com/iotfaqs.html"> IOT relay</a> directs current to two car lights to turn on at regular intervals (4am, when it's consistently dark) for image capture.
+
+      <img align="left" style=" width: 30%; margin: 10px 15px 0px 0px; border: 3px solid black;" src="../static/img/home2.jpg">
+
+       After captured images are run through the pipeline, their data is saved to a local sqlite3 database in my pi's home environment. Output images are saved to a self-updating directory for storage. Dimensional and color measurements in the sqlite database are supplemented with sensory information provided from three sources: cds photocell, capacitive soil moisture sensor, and dht11 temp/humidity sensor. These three sensors use analog current, which unfortunately must be converted into digital signal (via an <a href="https://www.raspberrypi-spy.co.uk/2013/10/analogue-sensors-on-the-raspberry-pi-using-an-mcp3008/">MCP 3008 converter</a>) to be properly read by the raspberry pi.
+      <br>
+      <br>
+      An hourly script records average measurements from each sensor along with weather data collected from the darksky api. Alongside these processes, the pi sends its database to an external heroku web server to update changes in the plant presented on this very site. The directory is linked to my github repository which automatically updates the server when changes are made and pushed to master.
+    </p>
+    </div>
+
+  <hr>
+
+  <div class="bg-img1" style="color:black">
+    <br>
+    <br>
+  </div>
+
+  <div style="color: #777;background-color:black;text-align:center;padding:50px 80px;text-align: justify;">
+    <h2 style="text-align:center;"> Why Spend All This Time on One Plant?</h2>
+    <hr>
+    <p>    This project has largely been a learning experience for me to dig into the basics of software and web development. Having graduated with a degree in Biology, I feel that computation will push the frontiers of biological study and will require a strong understanding of big data: both how to collect it, store it, and manipulate it. Doing so in real time helps to guide the course of experiments which require prompt results to inform future decisions, many of which must be made during the period of funding amid the experiment. Alternatively the world is becoming more and more automated and at least a cursory understanding of the mechanisms behind this automation should help with navigating the bizarre future we are unfolding.
+    <br>
+    <br>
+    Having graduated with an <i>arts</i> degree in Biology, I am sensitive to the way scientific results are presented and disseminated, and strongly believe that such results should be more accessible and digestible to the public. Creating a semi-interactive website designed to show people how a house plant is doing is my mulling over a path towards blending these two seemingly disparate spheres.
+    <br>
+    <br>
+    Photo<span class="blinking">_</span>Synthesis has provided me an opportunity to become proficient with Python for writing concept programs, become familiar with the flora of front end languages to custom design my own webpages/ presentations of information, and understand the logic of how databases are created, maintained, and implemented in web applications. Working on this project has largely directed my self teaching of code to facilitate some of the structure of the bootcamps that are quickly spreading for fresh code upstarts.
+    <br>
+    <br>
+    Further this project would not be possible without access to opensource code and free online education. Through academia I have not felt the level of ownership of my work as I have during this process, and have always wondered how accessible learning new skills are over free resources readily available online. While I was fortunate enough to have the time and resources to fully focus on this project, I believe that online learning is in many ways as valid as an education gained from more traditional institutions. Self directed learning helps you to discover your interests, and can motivate you to learn about career paths that more accurately fit the lifestyle you thrive under. In many ways this project is a love letter to opensource projects and the access of free information.
+
+    </p>
+    <br>
+    <br>
+    <h2 style="text-align:center;"> I would like to give a quick thanks to:</h2>
+    <hr>
+    <ul>
+      <li style="font-size: 18px;">Seren Willcock, former intern at the Danforth Center for revealing PlantCV to me</li>
+      <li style="font-size: 18px;">Austin Mack, friend and freelance backup server crafter who helped me wrap my head around concepts closer to the hardware</li>
+    </ul>
+  </div>
+
+  <div class="bg-img2" style="color:black">
+    <br>
+    <br>
+  </div>
+
+  <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+    <h2 style="text-align:center;"> So Now What? </h2>
+    <hr>
+    <p> This project has come to its natural resting point. I have a live way of collecting and presenting data, but to answer questions of greater importance, the scale of the data involved must be drastically larger. I like to think of this project as a means of understanding some of the skeleton that goes into data collection and presentation. From this point I hope to either learn more of the nuances of plant science to ask questions more relevant to plant health, production, or functioning. I would also like to understand how larger scale data architecture is built and directed in production grade workflows to answer biological questions. Digging into the software also presents interesting questions. I believe I sit at the precipice at the numerous intersections of biology and computer science and am excited to keep learning!
+    <br>
+  </div>
+
+</body>
+
+
+{% endblock %}

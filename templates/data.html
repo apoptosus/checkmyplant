@@ -1,0 +1,211 @@
+{% extends "index.html" %}
+{% block body %}
+
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  padding: 30px;
+
+}
+
+.col-container {
+  display: flex;
+  width: 100%;
+}
+
+.left {
+  width: 25%;
+  min-height: 600px;
+  height: auto !important;
+  height: 600px;
+  min-width: 215px;
+  background-color:#aaa;
+  padding-left: 10px;
+}
+
+.right {
+  width: 75%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container label {
+  position: relative;
+}
+
+/* Base styles for spans */
+.container span::before,
+.container span::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+
+}
+
+/* Radio buttons */
+.container span.radio:hover {
+  cursor: pointer;
+
+}
+.container span.radio::before {
+  left: -45px;
+  width: 45px;
+  height: 25px;
+  background-color: #003300;
+  border-radius: 50px;
+}
+
+.container span.radio::after {
+  left: -40px;
+  width: 17px;
+  height: 17px;
+  border-radius: 10px;
+  background-color: #ffcc00;
+  transition: left .25s, background-color .25s;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+input[type="radio"]:checked + label span.radio::after {
+  left: -22px;
+  background-color: #EBFF43;
+}
+
+.graphdisplay {
+    border: 5px solid green;
+    margin: auto;
+}
+
+</style>
+
+<title>Live Plant Data</title>
+</head>
+
+<body>
+
+<div class="col-container">
+
+  <!-- left column -->
+  <div class="column left">
+    <center><h1 style="padding-left: 0px;">Conditions:</h1></center>
+    <hr>
+    <div class="main" style="padding-left: 30px;">
+
+    	<form action="" method = "POST" onsubmit="">
+    		    <div class="container">
+              <input type="radio" name="sensortype" id="radio-1" value="phoLight">
+              <label for="radio-1"><span class="radio">Light</span></label>
+    		    </div>
+    		    <div class="container">
+    		      <input type="radio" name="sensortype" id="radio-2" value="dhtTemperature">
+    		      <label for="radio-2"><span class="radio">Temperature</span></label>
+    		    </div>
+            <div class="container">
+    		      <input type="radio" name="sensortype" id="radio-3" value="dhtHumidity">
+    		      <label for="radio-3"><span class="radio">Humidity</span></label>
+    		    </div>
+    		    <div class="container">
+    		      <input type="radio" name="sensortype" id="radio-4" value="capMoisture">
+    		      <label for="radio-4"><span class="radio">Soil Moisture</span></label>
+    		    </div>
+    				<div class="container">
+    		      <input type="radio" name="sensortype" id="radio-5" value="allHeight & Width">
+    		      <label for="radio-5"><span class="radio">Height & Width</span></label>
+    		    </div>
+            <div class="container">
+    		      <input type="radio" name="sensortype" id="radio-6" value="pcvArea">
+    		      <label for="radio-6"><span class="radio">Area</span></label>
+    		    </div>
+            <div class="container">
+    		      <input type="radio" name="sensortype" id="radio-7" value="allHeight,Width,Light,Moisture,Temperature">
+    		      <label for="radio-7"><span class="radio">Multivariate</span></label>
+    		    </div>
+      </div>
+  </div>
+
+  <!-- right column -->
+  <div class="column right" style="background-color:#bbb;">
+    <form action="" method = "POST" onsubmit="">
+
+{% if fig_name != None and duration > 0 %}
+    <h1 style="text-align:center;"> {{fig_name[3::]}} vs Time </h1>
+    <hr>
+    <center>
+      <img class="graphdisplay" src="{{ url_for('fig', fig_name = fig_name, duration = duration) }}" alt="Matplotlib Plot" height=auto width = 85%>
+    </center>
+
+    <br>
+    <center>
+      <input type="number" name="duration" labelby="duration" value="7"> = number of days ({{total}} days recorded)
+      <br>
+      <br>
+      <input type="submit" value="Submit">
+    </center>
+    </form>
+
+  {% else %}
+    <center><h1> Graph Navigation: </h1></center>
+    <hr>
+
+    <h4> Select a condition from the left and enter a duration below to explore how my pothos has been living!</h4>
+    <br>
+
+    <center>
+    <input type="number" name="duration" labelby="duration" value="7"> = number of days ({{total}} days recorded)
+    <br>
+    <br>
+    <input type="submit" value="Submit">
+    </center>
+    </form>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+  {% endif %}
+
+  <hr>
+
+  <center><h4>Supplemental Info</h4></center>
+  <ul>
+    <!-- <li>2/23: Began recording data</li>
+    <li>2/19: Deployed site</li>
+    <li>2/22: Accidentally moved plant</li> -->
+    <li><p>1/01: Began recording data<p></li>
+    <li><p>2/12: Deployed site<p></li>
+    <li><p>2/20: Altered camera settings<p></li>
+  </ul>
+
+<br>
+<br>
+  </div>
+</div>
+
+
+</body>
+
+
+{% endblock %}
+

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1″>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="../static/css/style.css" >
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="../static/img/favicon.ico" >
+  <style>
+      body {
+        padding-top: 30px;
+      }
+  </style>
+  <script>
+   function blinker() {
+     $('.blinking').fadeOut(100);
+     $('.blinking').fadeIn(100);
+   }
+   setInterval(blinker, 1500);
+  </script>
+</head>
+
+
+
+<body>
+
+  <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="./" class="navbar-brand">Photo<span class="blinking">_</span>Synthesis</a>
+      </div>
+      <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          
+          <!-- sample dropdown item -->
+          <!-- <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Data <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="/data/">Explore for yourself</a></li>
+              <li><a href="/sample/">Example Graphs</a></li>
+              <li><a href="/data/">Pi Data</a></li>
+            </ul>
+          </li> -->
+          <li>
+            <a href="/data/">Data</a>
+          </li>
+          <li>
+            <a href="/status/">Status</a>
+          </li>
+          <li>
+            <a href="/why/">About</a>
+          </li>
+          <li class="active">
+              <a style="font-size: 2.0em" href="https://github.com/apoptosus" class="fa fa-github"></a>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+		{% block body %}
+		{% endblock %}
+
+<div style="text-align: center;">
+   <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0;" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a>
+</div>
+<!-- <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. -->
+</body>
+
+
+
+</html>

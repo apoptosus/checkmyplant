@@ -1,0 +1,68 @@
+{% extends "index.html" %}
+{% block body %}
+
+<head>
+  <style type="text/css">
+    body {
+      background: url('../static/img/dendrites.JPG') no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../static/img/dendrites.JPG', sizingMethod='scale')";
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../static/img/dendrites.JPG', sizingMethod='scale');
+    }
+
+    .plantgif {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 45%;
+
+    }
+  @media only screen and (max-width: 480px) {
+    body {
+      background-color: black;
+    }
+
+    .plantgif {
+      align: center;
+      width: 80%;
+      position: fixed;
+      top: 60%;
+      left: 50%;
+      /* bring your own prefixes */
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
+    }
+
+  }
+
+
+  </style>
+  <title>Home: Welcome!</title>
+</head>
+
+<body>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  
+  <h1 style="color:white; text-align:center; font-family: 'Montserrat', sans-serif;"><mark style="background-color:#003300; color:green;">Open Source Plant Monitoring</mark></h1>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <div>
+    <img class="plantgif" src="../static/img/plant-breath.gif" alt="Flowers in Chania">
+  </div>
+
+</body>
+
+
+{% endblock %}
+

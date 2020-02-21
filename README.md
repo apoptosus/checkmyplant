@@ -1,5 +1,5 @@
 # Source code for [checkmyplant.com](https://www.checkmyplant.com)
-Website tracking my houseplant's wellbeing. 
+Website tracking my houseplant's wellbeing live. 
 
 
 

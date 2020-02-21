@@ -1,4 +1,4 @@
-# Source code for checkmyplant.com
+# Source code for checkmyplant.com(https://checkmyplant.com)
 Website tracking my houseplant's wellbeing. 
 
 

@@ -17,7 +17,6 @@ fig_name = None
 duration = None
 ylabel = None
 
-
 #home page
 @app.route('/')
 def home():
@@ -188,5 +187,5 @@ def fig(fig_name, duration):
     return send_file(output,mimetype='image/png')
 
 if __name__ == '__main__':
-    app.run() # remember to remove when pushing to heroku
+    app.run()
 
